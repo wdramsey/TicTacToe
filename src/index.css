@@ -1,6 +1,11 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 20px "Century Gothic", Futura, sans-serif;
+  margin: 10px;
+  background-image: url(./Woodbackground.jpeg);
+  background-size: cover;
+  position: fixed;
+  top: 25%;
+  left: 23.5%;
 }
 
 ol, ul {
@@ -17,19 +22,20 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-.square {
-  background: #fff;
-  border: 1px solid #999;
+.square { /* individual squares */
+  background: radial-gradient( rgb(50,50,50), rgb(10,10,10));
+  border: 3px solid #999;
   float: left;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
+  color:rgb(255, 255, 255);
   line-height: 34px;
-  height: 100px;
+  height: 125px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 100px;
+  width: 125px;
 }
 
 .square:focus {
@@ -40,11 +46,24 @@ ol, ul {
   background: #ddd;
 }
 
-.game {
+.game { /* encompasses game info and the board*/
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
+  background: linear-gradient(to top right, rgb(21, 65, 1), rgb(89,156,58), rgb(21, 65, 1));
+  padding: 20px;
+
+}
+.winner {
+  color: white;
+  margin-left: 20px;
+}
+.game-info { /* encompasses moves*/
+  margin-left: 20px;
 }
 
-.game-info {
-  margin-left: 20px;
+.btn {
+  background: rgb(24, 24, 24);
+  color:rgb(255, 255, 255);
+  font-size: medium;
 }
